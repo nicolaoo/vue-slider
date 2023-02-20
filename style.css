@@ -20,6 +20,7 @@ img{
 
 .carosello {
     position: relative;
+    margin: 50px;
 }
 
 #arrow-left {
