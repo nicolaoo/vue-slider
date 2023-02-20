@@ -1,0 +1,67 @@
+img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+	object-position: right;
+}
+
+.picture {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.carosello .carosello-chevron {
+    font-size: 60px;
+    position: absolute;
+}
+
+.carosello {
+    position: relative;
+}
+
+#arrow-left {
+    left: 50px;
+    top: 50%;
+    transform: translatey(-50%);
+    color: white;
+    z-index: 20;
+}
+
+#arrow-right {
+    right: 50px;
+    top: 50%;
+    transform: translatey(-50%);
+    color: white;
+    z-index: 20;
+}
+
+.title-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: aliceblue;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 70px;
+    color: azure;
+}
+
+.text-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: aliceblue;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: 25px;
+    color: beige;
+}
