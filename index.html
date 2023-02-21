@@ -15,13 +15,13 @@
         <div class="container my-3">
                 <div class="carosello">
 
-                     <div v-for="(element, index) in listPicture" class="picture col-auto active">
-                        <img src="./img/01.webp" alt="">
+                    <div v-for="(element, index) in listPicture" class="picture col-auto active">
+                        <img :src="element.image" alt="">
                         <h1 class="title-img">
                             {{element.title}}
                         </h1>
                         <p class="text-img">
-                            Marvel\\s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.
+                            {{element.text}}
                         </p>
                     </div> 
 

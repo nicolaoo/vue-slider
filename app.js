@@ -95,3 +95,5 @@ createApp({
 //     return condition === true ? 'hai vinto' : 'hai perso'
 
 // }
+
+// v-html="element.text" // per scrivere html
