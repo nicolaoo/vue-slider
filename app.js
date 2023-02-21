@@ -44,6 +44,8 @@ createApp({
                 } else {
                     this.pictureAddRight = lastIndex
                 }
+
+                console.log('sinistra')
                 // let lastIndex = pictureEl.length - 1
             
                 // pictureEl[pictureAddRight].classList.remove('active')
@@ -68,6 +70,8 @@ createApp({
                 } else {
                     this.pictureAddRight = 0
                 }
+
+                console.log('destra')
                 // console.log(pictureAddRight)
                 // pictureEl[pictureAddRight].classList.remove('active')
             
@@ -81,6 +85,34 @@ createApp({
             }
         
     },
+
+    created() {
+        console.log('created')
+    },
+
+    beforeCreate( ){
+        console.log('beforeCreate: ')
+    },
+
+    beforeMount(){
+        console.log('beforeMount ')
+    },
+
+    mounted() {
+        console.log('slide: ', this.listPicture)
+
+        this.autoplay = setInterval(this.moveRight, 2000)
+    },
+    
+    beforeUpdated() {
+        console.log('beforeUpdated ')
+    },
+
+    updated(){
+        console.log('updated ')
+    },
+
+    
 
 }).mount('#app')
 
