@@ -1,9 +1,6 @@
 const { createApp } = Vue
 
-createApp({
-    data(){
-        return{
-            listPicture: [
+let listPicture = [
                 {
                     image: './img/01.webp',
                     title: 'Marvel Spiderman Miles Morale',
@@ -25,25 +22,30 @@ createApp({
                     title: "Marvel's Avengers",
                     text: 'Marvel Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
                 }
-            ],
+            ]
 
+createApp({
+    data(){
+        return{
+            listPicture: listPicture,
             pictureAddRight: 0,
             
 
+
             methods: {
                 moveLeft() {
-                let lastIndex = pictureEl.length - 1
-            
-                pictureEl[pictureAddRight].classList.remove('active')
-            
-                if ( pictureAddRight < lastIndex){
-                    pictureAddRight += 1
-                } else {
-                    pictureAddRight = 0
-                }
-            
-                pictureEl[pictureAddRight].classList.add('active')
-                console.log(lastIndex)
+                    let lastIndex = pictureEl.length - 1
+                
+                    pictureEl[pictureAddRight].classList.remove('active')
+                
+                    if ( pictureAddRight < lastIndex){
+                        pictureAddRight += 1
+                    } else {
+                        pictureAddRight = 0
+                    }
+                
+                    pictureEl[pictureAddRight].classList.add('active')
+                    console.log(lastIndex)
             
                 },
 
@@ -65,3 +67,31 @@ createApp({
         }
     }
 }).mount('#app')
+
+
+// const { createApp } = Vue 
+
+// createApp({
+//     data() {
+//         return {
+//             point: 0,
+//             bombe[16, 15, 26, 35, 48, 59]
+//             latoGriglia: 10,
+//             difficoltà: '0', 
+//             caselleCliccate: [],
+//         },
+//     },
+// }).mount('#app')
+
+
+// let win = true 
+
+// let message = ''
+
+
+// let message = win === true ? 'hai vinto' : 'hai preso'
+
+// function getMessage(condition) {
+//     return condition === true ? 'hai vinto' : 'hai perso'
+
+// }
