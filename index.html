@@ -13,67 +13,69 @@
     <div id="app">
         
         <div class="container my-3">
-                <div class="carosello">
-
-                    <div v-for="(element, index) in listPicture" class="picture col-auto active">
-                        <img :src="element.image" alt="">
-                        <h1 class="title-img">
-                            {{element.title}}
-                        </h1>
-                        <p class="text-img">
-                            {{element.text}}
-                        </p>
-                    </div> 
-
-                    <!-- <div class="picture">
-                        <img src="./img/02.webp" alt="">
-                        <h1 class="title-img">
-                            Marvel's Avengers
-                        </h1>
-                        <p class="text-img">
-                            Marvel\\s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.
-                        </p>
-                    </div>
-
-                    <div class="picture">
-                        <img src="./img/03.webp" alt="">
-                        <h1 class="title-img">
-                            Marvel's Avengers
-                        </h1>
-                        <p class="text-img">
-                            Marvel\\s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.
-                        </p>
-                    </div>
-
-                    <div class="picture">
-                        <img src="./img/04.webp" alt="">
-                        <h1 class="title-img">
-                            Marvel's Avengers
-                        </h1>
-                        <p class="text-img">
-                            Marvel\\s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.
-                        </p>
-                    </div>
-
-                    <div class="picture">
-                        <img src="./img/05.webp" alt="">
-                        <h1 class="title-img">
-                            Marvel's Avengers
-                        </h1>
-                        <p class="text-img">
-                            Marvel\\s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.
-                        </p>
-                    </div> -->
-
-                    <div @click="moveLeft()" class="carosello-chevron " id="arrow-left">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </div>
-            
-                    <div @click="moveRight()" class="carosello-chevron " id="arrow-right">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div> 
+            <div class="carosello">
+    
+                <div v-for="(element, index) in listPicture" 
+                    class="picture" 
+                    :class="index === pictureAddRight ? 'active' : '' " >
+                    <img :src="element.image" alt="">
+                    <h1 class="title-img">
+                        {{element.title}}
+                    </h1>
+                    <p class="text-img">
+                        {{element.text}}
+                    </p>
+                </div> 
+    
+                <!-- <div class="picture">
+                    <img src="./img/02.webp" alt="">
+                    <h1 class="title-img">
+                        Marvel's Avengers
+                    </h1>
+                    <p class="text-img">
+                        Marvel\\s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.
+                    </p>
                 </div>
+    
+                <div class="picture">
+                    <img src="./img/03.webp" alt="">
+                    <h1 class="title-img">
+                        Marvel's Avengers
+                    </h1>
+                    <p class="text-img">
+                        Marvel\\s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.
+                    </p>
+                </div>
+    
+                <div class="picture">
+                    <img src="./img/04.webp" alt="">
+                    <h1 class="title-img">
+                        Marvel's Avengers
+                    </h1>
+                    <p class="text-img">
+                        Marvel\\s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.
+                    </p>
+                </div>
+    
+                <div class="picture">
+                    <img src="./img/05.webp" alt="">
+                    <h1 class="title-img">
+                        Marvel's Avengers
+                    </h1>
+                    <p class="text-img">
+                        Marvel\\s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.
+                    </p>
+                </div> -->
+    
+                <div @click="moveLeft" class="carosello-chevron " id="arrow-left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+        
+                <div @click="moveRight" class="carosello-chevron " id="arrow-right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div> 
             </div>
+        </div>
 
     </div>
     <script src="./app.js"></script>

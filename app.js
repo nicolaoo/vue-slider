@@ -30,42 +30,58 @@ createApp({
             listPicture: listPicture,
             pictureAddRight: 0,
             
-
-
-            methods: {
-                moveLeft() {
-                    let lastIndex = pictureEl.length - 1
-                
-                    pictureEl[pictureAddRight].classList.remove('active')
-                
-                    if ( pictureAddRight < lastIndex){
-                        pictureAddRight += 1
-                    } else {
-                        pictureAddRight = 0
-                    }
-                
-                    pictureEl[pictureAddRight].classList.add('active')
-                    console.log(lastIndex)
             
-                },
-
-                moveRight() {
-                    console.log(pictureAddRight)
-                    pictureEl[pictureAddRight].classList.remove('active')
-                
-                    if (pictureAddRight > 0){
-                        pictureAddRight--
-                    } else {
-                        pictureAddRight = pictureEl.length - 1
-                    }
-                    
-                    pictureEl[pictureAddRight].classList.add('active')
-                },
-
-            },
 
         }
-    }
+    },
+    methods: {
+            moveLeft() {
+        
+                const lastIndex = this.listPicture.length - 1
+                if (this.pictureAddRight > 0){
+                    this.pictureAddRight--
+        
+                } else {
+                    this.pictureAddRight = lastIndex
+                }
+                // let lastIndex = pictureEl.length - 1
+            
+                // pictureEl[pictureAddRight].classList.remove('active')
+            
+                // if ( pictureAddRight < lastIndex){
+                //     pictureAddRight += 1
+                // } else {
+                //     pictureAddRight = 0
+                // }
+            
+                // pictureEl[pictureAddRight].classList.add('active')
+                // console.log(lastIndex)
+        
+            },
+        
+            moveRight() {
+        
+                const lastIndex = this.listPicture.length - 1
+        
+                if ( this.pictureAddRight < lastIndex){
+                    this.pictureAddRight++
+                } else {
+                    this.pictureAddRight = 0
+                }
+                // console.log(pictureAddRight)
+                // pictureEl[pictureAddRight].classList.remove('active')
+            
+                // if (pictureAddRight > 0){
+                //     pictureAddRight--
+                // } else {
+                //     pictureAddRight = pictureEl.length - 1
+                // }
+                
+                // pictureEl[pictureAddRight].classList.add('active')
+            }
+        
+    },
+
 }).mount('#app')
 
 
